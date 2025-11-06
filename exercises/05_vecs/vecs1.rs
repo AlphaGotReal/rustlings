@@ -5,11 +5,19 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     // Use the vector macro.
     // let v = ???;
 
+    let mut v = Vec::new();
+    for i in a {
+        v.push(i);
+    }
+
     (a, v)
 }
 
 fn main() {
-    // You can optionally experiment here.
+
+    let v: Vec<i32> = vec![1, 2, 3, 4, 5];
+    println!("{:?}", v.get(10));
+
 }
 
 #[cfg(test)]
